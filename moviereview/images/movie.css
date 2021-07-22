@@ -168,11 +168,32 @@ div.boxleft5{
    
      
 }
-.rightrev{
+.box-review{
    font-style:italic;
    margin:5px;
    
 }
 .footer{
     clear: both;text-align: center;background-color: #A2B964;margin: 0;padding: 4pt;
+}
+.validator{
+    float:right;
+}
+.right-bar dl{
+        padding: 10pt;
+}
+.right-bar dl dt{
+    margin-top: 8pt;
+}
+.right-bar dl dt:first-child{
+    margin-top: 0;
+}
+.links ul{
+    padding: 0;
+}
+.links ul li{
+    list-style: none ;
+}
+.right-bar dt{
+    font-weight: bold;
 }
