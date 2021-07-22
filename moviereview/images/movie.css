@@ -14,7 +14,7 @@ h1{
     font-size: 24pt;
     font-weight: bold;
     font-family: Tahoma,Verdana, sans-serif;
-      text-size-adjust:3px 3px #999999;
+      
 }
 
 div.right-bar{
@@ -172,4 +172,7 @@ div.boxleft5{
    font-style:italic;
    margin:5px;
    
+}
+.footer{
+    clear: both;text-align: center;background-color: #A2B964;margin: 0;padding: 4pt;
 }
