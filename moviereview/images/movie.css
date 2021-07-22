@@ -33,13 +33,22 @@ div.boxleft1{
     font-size:8pt;
     font-weight:bold;
     background-color:#E8DC9B;
-    /* border:2px solid gray; */
-    /* border-radius: 10px; */
+    border:2px solid gray;
+    border-radius: 10px;padding: 8pt; 
+    margin-bottom: 10pt;
     
+}
+div.boxleft1 img{
+    float: left;
+}
+
+.review-list{
+    display: flex; flex-wrap: wrap;
 }
 
 .box-review{
-    width: 43%; padding: 8pt; margin: 1%; float: left; border:2px solid gray; border-radius: 10px;
+    width: 43%; margin: 1%; 
+    /* border:2px solid gray; border-radius: 10px; */
 }
 
 div.boxleft2{
