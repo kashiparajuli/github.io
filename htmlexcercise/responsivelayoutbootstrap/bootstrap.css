@@ -1,0 +1,43 @@
+header{
+    background-color: #acd7e5;
+    padding: 10px;
+    text-align: center;
+}
+
+
+footer{
+    background-color: #2f4f4f;
+    padding: 10px;
+    text-align: center;
+}
+
+.row col{
+    background-color: #2f4f4f;
+    display: flex;
+
+}
+.menu-container h3{
+    background-color:#2f4f4f;
+    border-right: 2px solid black;
+    color:white;
+    padding: 10px;
+    margin:0;
+}
+.row{
+    display: flex;
+    height: 50vh;
+}
+.col-md-3{
+    color: black;
+    background-color: #9d9d9d;
+    width:25%
+}
+
+.col-md-6{
+    background-color: #9d9d9d;
+    width:50%
+}
+.col-md-3{
+    background-color: #9d9d9d;
+    width:25%
+}
