@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizz4Day5</title>
+    <style>
+        .grid-container {
+            display: grid;
+            width: 400px;
+        }
+        .flex-container {
+            display: flex;
+            flex-direction: column;
+        }
+        input, select {
+            
+            border-radius: 5px;
+            outline: none;
+           
+        }
+        label {
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        select {
+            border: 2px solid gray;
+            border-radius: 6px;
+        }
+        span {
+            padding-left: 20px;
+        }
+        .select-box {
+            border: 2px solid gray;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <form action="">
+            <fieldset>
+                <legend>Party Info:</legend>
+                <div class="flex-container">
+                    <label for="">First Name: <span><input type="text"></span> </label>
+                <label for="">Last Name: <span><input type="text"></span> </label>
+                <label for="" >Favorite Food: 
+                    <div class="select-box">
+                        <select name="Favorite Foodr">
+                            <option selected>Pizza</option>
+                            <option>Ice Cream</option>
+                            <option>Burger and Fries</option>
+                    </div>
+                </label>
+                    
+                </div>
+            </fieldset>       
+        </form>
+    </div>
+   
+</body>
+</html>
