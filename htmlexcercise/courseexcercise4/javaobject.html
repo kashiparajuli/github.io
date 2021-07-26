@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo1">Object First</p>
+    <p id="demo">Object</p>
+    <p id="array">Object1</p>
+    <p id="demo2">Object2</p>
+    <p id="demo3">Object2</p>
+    <script>
+      
+      const txt="a,b,c,d,e";
+      
+      const newArray=txt.split(",");
+      document.getElementById("array").innerHTML=newArray[0];
+
+        const car={model:"2021", type:"500",color:"white"};
+
+        document.getElementById("demo1").innerHTML="the car type is "+car.type;
+        const person={name:"kashi",age:"36",address:"iowa",city:"fairfield"};
+        document.getElementById("demo").innerHTML="the name is "+person.name+"and"+
+        "age is "+ person.age;
+
+        let str="kashi nath parajuli nath";
+       document.getElementById("demo2").innerHTML="location of nath is"+str.indexOf("nath"); 
+       document.getElementById("demo3").innerHTML="location of nath at last position is"+ str.lastIndexOf("nath");
+          </script>
+</body>
+</html>  

@@ -1,0 +1,48 @@
+body{
+    background-color: cyan;
+    margin: 10px;
+}
+h1{
+    color: tomato;
+    text-align: center;
+}
+.para1 p{
+    color:red;
+    font-family: sans-serif;
+    font-size: 20pt;
+    font-weight:bold ;
+    border: 2px solid black;
+    border-radius: 1000px;
+
+}
+#para2 {
+    color: violet;
+    text-align: center;
+}
+.first{
+    opacity: 0.1;
+    background-color: green;
+}
+.second{
+    opacity:0.3;
+    background-color: green;
+}
+.third{
+    opacity:0.6;
+    background-color: green;
+}
+.fourth{
+    opacity:1;
+    background-color: green;
+}
+
+.a ul{
+    list-style-type: square;
+}
+ol.b{
+    list-style-type: lower-roman;
+
+}
+ol.c{
+    list-style-type: lower-alpha;
+}
