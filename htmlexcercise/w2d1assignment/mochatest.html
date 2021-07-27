@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <!-- add mocha css, to show results -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
+  <!-- add mocha framework code -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js"></script>
+  <script>
+    mocha.setup('bdd'); // minimal setup
+  </script>
+  <!-- add chai -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.js"></script>
+  <script>
+    // chai has a lot of stuff, let's make assert global
+    let assert = chai.assert;
+  </script>
+<script>
+    /* 4 Define a function sum() and a function multiply() that sums and multiplies (respectively) all the numbers in an array of numbers*/
+    
+    function sum(arr) {
+        return arr.reduce((num1, num2) => num1 + num2);
+    }
+    
+    function mutliply(arr) {
+        return arr.reduce((num1, num2) => num1 * num2);
+    }
+    function reverse(str1) {
+        return str1.split("").reduce((char1, char2) => {
+           return char2 + char1;
+        });
+    }
+    
+    /*Write a function filterLongWords() that takes an array of words and an integer i and 
+    returns the array of words that are longer than i.*/
+    function filterLongWords(arr, i) {
+        return arr.filter((word) => word.length > i);
+    }
+    </script>
+    <script>
+    describe("sum", function () {
+        it("takes array [1, 2, 3, 4]) and returns the sum 10",
+            function () {
+                assert.equal(sum([1, 2, 3, 4]),10);
+            });
+    });
+    
+    describe("multiply", function () {
+        it("takes array [1, 2, 3, 4]) and returns the multiplication 24",
+            function () {
+                assert.equal(mutliply([1, 2, 3, 4]),24);
+            });
+    });
+    
+    
+    describe("reverse", function () {
+        it("takes string \"Kashi\" and reverse the string \"ihsak\"",
+            function () {
+                assert.equal(reverse("kashi"),"ihsak");
+            });
+    });
+    
+    describe("filterLongWords", function () {
+        it("takes arrays and displays new array with required filter",
+            function () {
+                assert.equal(filterLongWords(['kashinath', 'ram', 'swarnim', 'dal'],3).toString(),['kashinath,swarnim'].toString())
+            });
+    });
+</script>
+</head>
+<body>
+  <!-- the script with tests (describe, it...) -->
+  <!-- <script src="test.js"></script> -->
+      <!-- the element with id="mocha" will contain test results -->
+ <div id="mocha"></div>
+
+    <!-- run tests! -->
+    <script>
+      mocha.run();
+    </script>
+</body>
+</html>
