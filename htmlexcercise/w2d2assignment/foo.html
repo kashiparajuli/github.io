@@ -1,0 +1,12 @@
+<script>
+    var foo=1;
+    function bar(){
+        var foo; // undefined
+        if(!foo){
+            foo=10;
+        }
+        alert(foo);
+    }
+    console.log(bar());
+    console.log(foo);
+</script>
