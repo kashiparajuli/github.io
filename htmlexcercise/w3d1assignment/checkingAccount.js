@@ -1,4 +1,4 @@
-class ChecckingAccount extends Account {
+class CheckingAccount extends Account {
     constructor(number, overdraftLimit) {
         super(number);
         this._overdraftLimit = overdraftLimit;

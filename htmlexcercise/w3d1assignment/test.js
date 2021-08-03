@@ -79,7 +79,7 @@ describe("SavingAccount:toString", function () {
 describe("CheckingAccount:getOverdraftLimit", function () {
     it("takes no arguments and returns OverdraftLimit of an account",
         function () {
-            let checkingObj=new ChecckingAccount(12345,10000);
+            let checkingObj=new CheckingAccount(12345,10000);
             assert.equal(10000, checkingObj.getOverdraftLimit());
         });
 });
@@ -88,7 +88,7 @@ describe("CheckingAccount:getOverdraftLimit", function () {
 describe("CheckingAccount:setOverdraftLimit", function () {
     it("takes no arguments and returns verdraftLimit of an account of an account",
         function () {
-            let checkingObj=new ChecckingAccount(12345,10000);
+            let checkingObj=new CheckingAccount(12345,10000);
             checkingObj.setOverdraftLimit(10000);
             assert.equal(10000, checkingObj.getOverdraftLimit());
         });
@@ -97,7 +97,7 @@ describe("CheckingAccount:setOverdraftLimit", function () {
 describe("CheckingAccount:toString", function () {
     it("takes no arguments and returns all attributes of checking account",
         function () {
-            let checkingOb=new ChecckingAccount(12345,10000);
+            let checkingOb=new CheckingAccount(12345,10000);
             assert.equal("CheckingAccount: 12345: balance 5000 overdraftLimit 10000", checkingOb.toString());
         });
 });
