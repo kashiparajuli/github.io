@@ -19,9 +19,12 @@
     </script>
 
     <script>
-        // write your code for the function longestNoSapce() here
-        // remember it can take any amount of strings!
-
+  function longestNoSpace(...strings) {
+            return strings
+                .filter((str) => { return str.indexOf(" ") < 0 })
+                .map((str) => { return str.length })
+                .reduce( (acc, curr) => { return curr > acc ? curr : acc }, 0)
+        }
 
     </script>
     <script src="code.js"></script>

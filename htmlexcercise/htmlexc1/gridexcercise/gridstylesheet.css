@@ -1,0 +1,9 @@
+
+.container{
+    display:grid;
+    background-color: white;
+    
+}
+.one{grid-row: 1/span2;
+
+}

@@ -1,0 +1,54 @@
+<!-- 
+/*
+// var x = 5;
+// var y = test();
+// var b = { x: 4 };
+// var z = y.bind(b);
+// z();
+// function test() {
+//     console.log(this);
+//     console.log(x);
+//     var z = function() {
+//         var x = 3;
+//         console.log(this);
+//         console.log(this.x);
+//     }
+//     var x = 8;
+//     z();
+//     return z;
+//  -->
+
+   
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>W2D4 Q2</title>
+        <meta charset="utf8">
+     
+    </head>
+    <body>
+        <script>
+            let VALIDATOR = (function() {
+    function validateFirstName() {
+        return document.getElementById("first").value !== "";
+    }
+    function validateLastName() {
+        return document.getElementById("last").value !== "";
+    }
+    function validateBoth() {
+        return validateFirstName() && validateLastName();
+    }
+    return {
+        validate : validateBoth
+    } 
+})();
+        </script>
+
+        <form id="myForm" method="POST">
+            <input type="text" name="first" id="first" placeholder="First Name" /> <br />
+            <input type="text" name="last" id="last" placeholder="Last Name" /> <br />
+            <input type="submit" />
+        </form>
+    </body>
+</html>
+

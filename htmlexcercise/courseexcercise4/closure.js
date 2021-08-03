@@ -181,7 +181,7 @@ console.log(m(30,40));
 
 //curring with bind.
 
-function multiply(a,b){
+/*function multiply(a,b){
     return a*b;
 }
 
@@ -208,4 +208,4 @@ var you={
 
 console.log(me.getFullname.apply(you));
 
-
+*/
