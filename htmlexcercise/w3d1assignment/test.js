@@ -102,7 +102,60 @@ describe("CheckingAccount:toString", function () {
         });
 });
 
-// return "CheckingAccount: " + this.getNumber() + ": balance " + this.getBalance() +
-// "overdraftLimit " + this._overdraftLimit;
+describe("Bank: Class Method", function () {
+    it("Add Account Number test", () => {
+      let bank = new Bank();
+      assert.equal(bank.addAccount(), 1);
+    });
+  });
+
+  describe("Saving Account Added: Bank Class Method", function () {
+    it("Add Saving Account test", () => {
+      let bank = new Bank();
+      bank.addSavingsAccount();
+      assert.equal(bank.addSavingsAccount(), 2);
+    });
+  });
+
+  describe("Checking Account Added: Bank Class Method", function () {
+    it("Add Saving Account test", () => {
+      let bank = new Bank();
+      bank.addCheckingAccount(1700);
+      bank.addCheckingAccount(1700);
+      assert.equal(bank.addCheckingAccount(2000), 3);
+    });
+  });
 
 
+  describe("Close Account: Bank Class Method", function () {
+    it("Add Saving Account test", () => {
+      let bank = new Bank();
+      bank.addCheckingAccount(1500);
+      bank.addCheckingAccount(1500);
+      bank.addCheckingAccount(1500);
+      assert.equal(bank.closeAccount(7), 2);
+    });
+  });
+
+  describe("Validating Bank Class Method:bankReport", function () {
+    it("Bank Report Test", () => {
+      let bank = new Bank();
+      bank.addCheckingAccount(1500);
+      bank.addCheckingAccount(1500);
+      bank.addCheckingAccount(1500);
+    //   console.log(bank.accountReport());
+      assert.equal(bank.accountReport(), "CheckingAccount: 10: balance 5000 overdraftLimit 1500\nCheckingAccount: 11: balance 5000 overdraftLimit 1500\nCheckingAccount: 12: balance 5000 overdraftLimit 1500");
+    });
+  });
+  
+  describe("Validating Bank Class Method:endOfMonth", function () {
+    it("validating  test", () => {
+      let bank = new Bank();
+      bank.addSavingsAccount(15.5);
+      bank._accounts[bank._accounts.length - 1].deposit(5000);
+      bank.addCheckingAccount(1500);
+      bank._accounts[bank._accounts.length - 1].withdraw(500);
+    //   console.log(bank.endOfMonth());
+      assert.equal(bank.endOfMonth(), "Interest added SavingAccount 13: balance:11550 interest: 15.5\n");
+    });
+  });

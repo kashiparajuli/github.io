@@ -1,36 +1,43 @@
 
 class Bank {
-    static nextNumber;
+    
     constructor() {
         this._accounts = [];
     }
-
+    static nextNumber=1;
     addAccount() {
-        this._accounts.push(new Account(number));
+        this._accounts.push(new Account(Bank.nextNumber));
+        Bank.nextNumber=Bank.nextNumber+1;
         return this._accounts.length;
 
     }
-    addSavingsAccount(interest, number) {
-        this._accounts.push(new SavingAccount(interest, number));
+    addSavingsAccount(interest) {
+        this._accounts.push(new SavingAccount(Bank.nextNumber,interest));
+        Bank.nextNumber=Bank.nextNumber+1;
         return this._accounts.length;
 
     }
-    addCheckingAccount(overdraftLimit, number) {
-        this._acccounts.push(new ChecckingAccount(overdraftLimit, number));
+    addCheckingAccount(overdraft) {
+        this._accounts.push(new CheckingAccount(Bank.nextNumber,overdraft));
+        Bank.nextNumber=Bank.nextNumber+1;
         return this._accounts.length;
     }
     closeAccount(number) {
-
+    this._accounts=this._accounts.filter(ac=>{return ac._number!==number});
+     return this._accounts.length;
+     
     }
     accountReport() {
-
+        return this._accounts.filter(acc => acc instanceof Account).map(acc => acc.toString()).join("\n");
     }
 
     endOfMonth() {
-
+        return this._accounts.map(elem => {
+            return elem.endOfMonth();
+          }).toString().replace(",", "\n");
+        }
     }
 
 
 
-}
 

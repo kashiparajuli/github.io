@@ -14,10 +14,10 @@ class SavingAccount extends Account{
         this._balance+=(this._balance*this.getInterest()/100);
     }
 
-    // endOfMonth() {
-       
-    //     return ('interest Added saving account:${this.getNumber()} balance:${this.getBalannce} interest:${this._interest}')
-    // }
+    endOfMonth() {
+        this.addInterest();
+        return "Interest added SavingAccount " + this.getNumber() + ": balance:" + this.getBalance() + " interest: " + this.getInterest();
+      }
     toString() {
         return "SavingAccount: " + this._number + ": balance " + this.getBalance() +
             ": interest " + this._interest;
