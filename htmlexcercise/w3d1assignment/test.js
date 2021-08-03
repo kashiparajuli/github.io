@@ -13,7 +13,7 @@ describe("Account:getBalance", function () {
 });
 
 describe("Account:deposit", function () {
-    it("takes argument and returns balance of an account",
+    it("take deposit amount argument and retuns balance",
         function () {
             let accObj = new Account(12345);
             accObj.deposit(2000);
@@ -30,7 +30,7 @@ describe("Account:withdraw", function () {
 });
 
 describe("Account:toString", function () {
-    it("takes no arguments and returns number of an account",
+    it("retuns all attributes",
         function () {
             let accObj1=new Account(12345);
             assert.equal("Account 12345: balance 5000", accObj1.toString());
@@ -57,7 +57,7 @@ describe("SavingAccount:setInterest", function () {
 });
 
 describe("SavingAccount:addInterest", function () {
-    it("takes no arguments and returns interest of an account",
+    it("takes no arguments and returns balance of an account after interest addition",
         function () {
             let savingObj=new SavingAccount(12345,10);
             savingObj.addInterest(10);
@@ -86,7 +86,7 @@ describe("CheckingAccount:getOverdraftLimit", function () {
 
 
 describe("CheckingAccount:setOverdraftLimit", function () {
-    it("takes no arguments and returns interest of an account",
+    it("takes no arguments and returns verdraftLimit of an account of an account",
         function () {
             let checkingObj=new ChecckingAccount(12345,10000);
             checkingObj.setOverdraftLimit(10000);
@@ -95,7 +95,7 @@ describe("CheckingAccount:setOverdraftLimit", function () {
 });
 
 describe("CheckingAccount:toString", function () {
-    it("takes no arguments and returns number of an account",
+    it("takes no arguments and returns all attributes of checking account",
         function () {
             let checkingOb=new ChecckingAccount(12345,10000);
             assert.equal("CheckingAccount: 12345: balance 5000 overdraftLimit 10000", checkingOb.toString());
