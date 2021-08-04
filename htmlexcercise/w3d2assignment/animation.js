@@ -1,14 +1,15 @@
 $(document).ready(function () {
 
-    let initGrow = 10;
+    let grow = 10;
     let initTime = 250;
     let circleWidth = 50;
     let numberCircles=5;
+    let initGrow=0;
 
     function increaseGrow() {
-        initGrow += 1;
+        grow += initGrow;
         $('div').css({
-            "height": initGrow + "px", "width": initGrow + "px", "border-radius": "50%"
+            "height": grow + "px", "width": grow + "px", "border-radius": "50%"
         })
     }
 
