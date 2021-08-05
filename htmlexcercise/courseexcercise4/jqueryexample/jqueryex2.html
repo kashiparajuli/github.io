@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+ /*  Attach a directly bound event handler */
+$("#list a").on("click", function(event) {
+
+/*  Attach a delegated event handler--handles dynamically added items */
+//$( "#list" ).on( "click", "a", function( event ) {
+
+event.preventDefault(); //don't want to follow the link for this example
+console.log($(this).text());
+$("#list").append("<li><a href='http://newdomain.com'>Item #5</a></li>");
+/* avoid html hacking 
+const $a = $('<a>', {href: 'http://newdomain.com', text: 'Item #5'});
+const $lia = $('<li>').append($a);
+$( "#list" ).append($lia ); */
+
+});
+
+/* moved the a part from the selector to the second parameter position of the .on() method. This second, selector parameter tells the handler to listen for the specified event, and when it hears it, check to see if the triggering element for that event matches the second parameter.
+https://learn.jquery.com/events/event-delegation/ */
+    </script>
+    <div id="container">
+        <ul id="list">
+            <li><a href="http://domain1.com">Item#1</a></li>
+            <li><a href="/Local/Path/1">Item#2</a></li>
+            <li><a href="/Local/Path/1">Item#3</a></li>
+            <li><a href="http://download.com">Item#4</a></li>
+        </ul>
+    </div>
+</body>
+</html>

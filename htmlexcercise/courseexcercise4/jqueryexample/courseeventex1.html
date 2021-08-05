@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Event handling</title>
+</head>
+
+<body>
+    <div>
+        <p>Evernts are very <em>Important</em></p>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $(div, p, em).click(hello);
+            function hello() {
+                //console.log("you clicked on the " + $(this)[0].tagName);
+                console.log("you clicked on the " +this.Name);
+            }
+        });
+    </script>
+
+</body>
+
+</html>
