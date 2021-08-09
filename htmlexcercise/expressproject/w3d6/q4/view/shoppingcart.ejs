@@ -1,0 +1,26 @@
+<%-include('head.ejs') %>
+    <div class="container">
+        <h3>Cart List</h3>
+        <table class="table table-responsive">
+            <tr>
+                <th>productName</th>
+                <th>Totalprice</th>
+                <th>quantity</th>
+            </tr>
+            <%for(let x=0;x<products.length; x++){%>
+                <tr>
+                    <td>
+                        <%=products[x].name%>
+                    </td>
+                    <td>
+                        <%=products[x].price%>
+                    </td>
+                    <td>
+                        <%=products[x].quantity%>
+                    </td>
+
+                </tr>
+                <%}%>
+        </table>
+    </div>
+    <%-include('foot.ejs') %>

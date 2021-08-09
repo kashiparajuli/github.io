@@ -1,0 +1,14 @@
+table{
+    /* border:1px solid black; */
+    margin-bottom: 0 !important;
+}
+.container{
+    background-color:lightgray; padding:1%;
+}
+
+header,footer{
+    padding:2%;
+    background-color:lightgreen;
+    text-align: center;
+    color:white;
+}
