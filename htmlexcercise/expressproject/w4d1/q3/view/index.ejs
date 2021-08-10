@@ -1,0 +1,35 @@
+<%-include('head.ejs') %>
+    <div class="container">
+        <h3>Product List</h3>
+        <table class="table table-responsive">
+            <tr>
+                <th>productName</th>
+                <th>price</th>
+                <th>description</th>
+                <th>Action</th>
+            </tr>
+            <%for(let x=0;x<products.length; x++){%>
+                <tr>
+                    <td>
+                        <%=products[x].productName%>
+                    </td>
+                    <td>
+                        <%=products[x].price%>
+                    </td>
+                    <td>
+                        <%=products[x].description%>
+                    </td>
+                    <td>
+                        <form action="/addtoCart" method="post">
+                            <input type="hidden" name="name" value="<%=products[x].productName%>">
+                            <input type="hidden" name="price" value="<%=products[x].price%>">
+
+                            <input type="submit" value="AddtoCart">
+                            <br />
+                        </form>
+                    </td>
+                </tr>
+                <%}%>
+        </table>
+    </div>
+    <%-include('foot.ejs') %>
