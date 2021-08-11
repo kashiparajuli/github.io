@@ -37,6 +37,7 @@ app.post('/addtoCart', (req, res) => {
         if (p.name === req.body.name) {
             p.price += parseInt(req.body.price);
             p.quantity++;
+            present = true;
         }
     }
     if (!present) {

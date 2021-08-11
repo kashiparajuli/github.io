@@ -17,6 +17,6 @@ app.get('/add', (req, res) => {
 app.post('/add', (req, res) => {
     list.push(req.body.item);
     res.redirect(303, "/");
-})
+});
 
 app.listen(3000);

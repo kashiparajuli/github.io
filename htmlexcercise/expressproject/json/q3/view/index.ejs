@@ -1,0 +1,36 @@
+<%-include('head.ejs') %>
+    <div class="container">
+        <h3>Product List</h3>
+        <p id="message"></p>
+        <a href="/cart">Cart(<span id="count"><%=count%></span>)</a>
+        <table class="table table-responsive">
+            <tr>
+                <th>productName</th>
+                <th>price</th>
+                <th>description</th>
+                <th>Action</th>
+            </tr>
+            <%for(let x=0;x<products.length; x++){%>
+                <tr>
+                    <td>
+                        <%=products[x].productName%>
+                    </td>
+                    <td>
+                        <%=products[x].price%>
+                    </td>
+                    <td>
+                        <%=products[x].description%>
+                    </td>
+                    <td>
+                        <form class="add-cart" action="/addtoCart" method="post">
+                            <input type="hidden" id="name" name="name" value="<%=products[x].productName%>">
+                            <input type="hidden" id="price" name="price" value="<%=products[x].price%>">
+                            <input type="submit" value="AddtoCart">
+                            <br />
+                        </form>
+                    </td>
+                </tr>
+                <%}%>
+        </table>
+    </div>
+    <%-include('foot.ejs') %>
